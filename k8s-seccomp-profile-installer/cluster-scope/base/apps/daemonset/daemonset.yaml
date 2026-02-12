@@ -6,6 +6,8 @@ spec:
   template:
     spec:
       serviceAccountName: seccomp-profile-installer
+      tolerations:
+        - operator: Exists  
       containers:
         - name: installer
           image: docker.io/alpine:latest
